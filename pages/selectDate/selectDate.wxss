@@ -1,0 +1,45 @@
+/* pages/selectDate/selectDate.wxss */
+.changeModel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  color: #7a7a7a;
+  padding: 0 30rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  line-height: 1;
+}
+.model-icon{
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.complete{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100rpx;
+}
+
+.complete text:first-child{
+  color: #999;
+}
+.complete text:nth-child(2){
+  font-size: 36rpx;
+}
+.complete text:last-child{
+  color: #5581FE;
+}
+
+
+.main{
+  width: 100%;
+}
+
+
+
+.clicked{
+  color: #5581FE;
+}

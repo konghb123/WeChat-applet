@@ -1,0 +1,7 @@
+<!--pages/selectDate/selectDate-index.wxml-->
+<view class="container">
+  <view class="select" bindtap="selectDate">
+			<view class="selectData">{{currentDate}}</view>
+			<image class="selectArrow" src="/image/selectArrow.png" ></image>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+/* pages/selectDate/selectDate-index.wxss */
+.select{
+  display: flex;
+  background: #eee;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  align-items: center;
+  line-height: 1;
+}
+.selectArrow{
+  width: 44rpx;
+  height: 44rpx;
+}

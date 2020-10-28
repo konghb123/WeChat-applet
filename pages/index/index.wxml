@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view bindtap="imageScale">1.设定图片固定比例</view>
-  <view bindtap="tailoring">2.裁剪图片插件</view>
+  <navigator url="/pages/imageScale/imageScale">1.设定图片固定比例</navigator>
+  <navigator url="/pages/cropper/cropper">2.裁剪图片插件</navigator>
+  <navigator url="/pages/selectDate/selectDate-index">3.仿照支付宝日期选择组件</navigator>
 </view>

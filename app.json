@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/imageScale/imageScale",
     "pages/cropper/cropper",
-    "components/cropper/image-cropper"
+    "components/cropper/image-cropper",
+    "pages/selectDate/selectDate-index",
+    "pages/selectDate/selectDate"
   ],
   "window": {
     "backgroundTextStyle": "light",

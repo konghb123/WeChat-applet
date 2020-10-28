@@ -1,0 +1,44 @@
+<!--pages/selectDate/selectDate.wxml-->
+<view class="container">
+  <!-- 切换日期选择模式 -->
+  <view class="changeModel" bindtap="changeModel">
+    <view wx:if="{{model}}">按日选择</view>
+    <view wx:if="{{!model}}">按月选择</view>
+    <image class="model-icon" src="/image/selected-date.png"></image>
+  </view>
+  <!-- 确认/取消 操作 -->
+  <view class="complete">
+    <text bindtap="cancle">取消</text>
+    <text>选择时间</text>
+    <text bindtap="confirm">确认</text>
+  </view>
+  <!-- 按日选择 -->
+  <!-- 按月选择 -->
+
+  <view class="main">
+    <!-- 按日选择 -->
+    <view class="selectDay" wx:if="{{model}}">
+      <text bindtap="clickChange" class="{{click===1?'clicked':''}}">{{years[startValue[0]]}}-{{months[startValue[1]]}}-{{days[startValue[2]]}}</text>
+      <text>至</text>
+      <text bindtap="clickChange" class="{{click===2?'clicked':''}}">{{years[endValue[0]]}}-{{months[endValue[1]]}}-{{days[endValue[2]]}}</text>
+    </view>
+    <!-- 按月选择 -->
+    <view class="{{click===0?'clicked':''}}" wx:else bindtap="clickChange">
+      {{years[value[0]]}}-{{months[value[1]]}}
+    </view>
+
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{!model?value:(click===1?startValue:endValue)}}"
+      bindchange="selectDateChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" wx:key="key" style="line-height: 50px; text-align: center;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" wx:key="key" style="line-height: 50px; text-align: center;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column wx:if="{{model}}">
+        <view wx:for="{{days}}" wx:key="key" style="line-height: 50px; text-align: center;">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
+</view>

@@ -68,6 +68,13 @@
         {
           "name": "裁剪图片",
           "pathName": "pages/cropper/cropper",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/selectDate/selectDate-index",
+          "pathName": "pages/selectDate/selectDate-index",
+          "query": "",
           "scene": null
         }
       ]

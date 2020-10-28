@@ -23,5 +23,11 @@ Page({
     wx.navigateTo({
       url: '../cropper/cropper',
     })
+  },
+  // 日期选择组件
+  selectDate(){
+    wx.navigateTo({
+      url: 'url',
+    })
   }
 })
