@@ -20,6 +20,8 @@ Page({
   },
   // 裁剪图片插件
   tailoring(){
-    
+    wx.navigateTo({
+      url: '../cropper/cropper',
+    })
   }
 })

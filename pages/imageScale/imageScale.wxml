@@ -1,6 +1,6 @@
 <!--pages/imageScale/imageScale.wxml-->
 <view class="container">
-  <view>请点击空白处选择图片</view>
+  <view>请点击空白处选择图片(当前比例4:3)</view>
   <view class="upload" id="img" style="height:{{height}}" bindtap="chooseImage">
     <image src="{{src}}" alt=""></image>
   </view>

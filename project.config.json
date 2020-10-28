@@ -62,6 +62,12 @@
         {
           "name": "设定图片固定比例",
           "pathName": "pages/imageScale/imageScale",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "裁剪图片",
+          "pathName": "pages/cropper/cropper",
           "scene": null
         }
       ]
