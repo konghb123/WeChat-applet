@@ -1,0 +1,9 @@
+/* pages/imageScale/imageScale.wxss */
+.upload{
+  width: 100%;
+  background: #fff;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
