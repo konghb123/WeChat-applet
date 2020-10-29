@@ -1,4 +1,6 @@
 /* pages/selectDate/selectDate.wxss */
+
+/* 按日/按月 选择 */
 .changeModel{
   display: flex;
   justify-content: center;
@@ -15,6 +17,8 @@
   height: 44rpx;
 }
 
+
+/* 取消/确认 操作 */
 .complete{
   width: 100%;
   display: flex;
@@ -39,7 +43,37 @@
 }
 
 
-
+/* 被选中的时间颜色 */
 .clicked{
   color: #5581FE;
+}
+
+/* 时间选择  样式 */
+/* 按日选择 */
+.selectDay,.selectMonth{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 34rpx;
+  margin-top: 50rpx;
+}
+.selectDay view{
+  border-bottom: 2rpx solid ;
+  padding: 0 50rpx 20rpx;
+}
+.selectDay.clicked view{
+  border-bottom: 2rpx solid #5581FE;
+  padding: 0 50rpx 20rpx;
+}
+/* 按月选择 */
+.selectMonth{
+  justify-content:center;
+  border-bottom: 2rpx solid ;
+}
+.selectMonth.clicked{
+  justify-content:center;
+  border-bottom: 2rpx solid #5581FE;
+}
+.selectMonth view{
+  padding: 0 50rpx 20rpx;
 }

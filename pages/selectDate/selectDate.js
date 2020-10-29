@@ -20,7 +20,7 @@ for (let year = 1990; year <= now.getFullYear(); year++) {
 
 function getCurrentYearMonth(year) { //获取当年 月份数  如果是今年 截止到当前日期
   let months = []
-  let month = year === now.getFullYear() ? now.getMonth() + 1 : 12
+  let month = year == now.getFullYear() ? now.getMonth() + 1 : 12
   for (let i = 1; i <= month; i++) {
     months.push(process(i))
   }
@@ -35,7 +35,7 @@ function getCurrentMonthDay(year, month) { //获取当前月份天数
   let d = new Date(year, month, 0);
   let monthDay = d.getDate()
   let days = []
-  d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth() ? monthDay = now.getDate() : '' // 当前天数截至到当天
+  d.getFullYear() == now.getFullYear() && d.getMonth() == now.getMonth() ? monthDay = now.getDate() : '' // 当前天数截至到当天
   for (let day = 1; day <= monthDay; day++) {
     days.push(process(day))
   }
@@ -79,11 +79,11 @@ Page({
   },
   //判断展示页面  今日/本月/按日/按月
   option(currentDate) {
-    if (currentDate === "本日") { //本日  
+    if (currentDate == "本日") { //本日  
       this.setData({
         click: 1
       })
-    } else if (currentDate === "本月") { //本月
+    } else if (currentDate == "本月") { //本月
       this.setData({
         model: false
       })
@@ -138,9 +138,10 @@ Page({
       this.determine()
     })
   },
-  //再切换选择哪个模式 哪个时间的时候判断 月份数 天数
+  //在切换选择哪个模式 哪个时间的时候判断 月份数 天数
   determine() {
-    let string = !this.data.model ? 'value' : (this.data.click === 1 ? 'startValue' : 'endValue')
+    console.log(this.data.click)
+    let string = this.data.click==0 ? 'value' : (this.data.click == 1 ? 'startValue' : 'endValue')
     let year = years[this.data[string][0]]
     let month = this.data[string][1]
     this.setData({
@@ -150,18 +151,16 @@ Page({
         days:getCurrentMonthDay(year,this.data.months[month])
       })
     })
-    console.log(months, days)
   },
 
 
   //切换日期
   selectDateChange(event) {
-    let value = event.detail.value
-    this.monthDayChange(value) //日期切换后  月份数  天数 将会变化
+    this.monthDayChange( event.detail.value) //日期切换后  月份数  天数 将会变化
   },
   // 日期切换后  月份数  天数 将会变化
   monthDayChange(value) {
-    if (this.data.click === 0) { //按月份选择
+    if (this.data.click == 0) { //按月份选择
 
       this.setData({
         value,
@@ -169,9 +168,9 @@ Page({
       })
 
     } else { //按日选择
-      let string = this.data.click === 1 ? 'startValue' : 'endValue'
-      let year = this.data.click === 1 ? this.data.years[value[0]] : this.data.years[value[0]]
-      let month = this.data.click === 1 ? Number(this.data.months[value[1]]) : Number(this.data.months[value[1]])
+      let string = this.data.click == 1 ? 'startValue' : 'endValue'
+      let year = this.data.click == 1 ? this.data.years[value[0]] : this.data.years[value[0]]
+      let month = this.data.click == 1 ? Number(this.data.months[value[1]]) : Number(this.data.months[value[1]])
       this.setData({
         [string]: value,
         months: getCurrentYearMonth(year),
@@ -206,13 +205,13 @@ Page({
       let startTime = new Date(start).getTime()
       let endTime = new Date(end).getTime()
 
-      currentDate = startTime === endTime && (years[startValue[0]] == now.getFullYear() && Number(months[startValue[1]]) == now.getMonth() + 1) && Number(days[startValue[2]]) == now.getDate() ? '本日' : (startTime < endTime ? start + '-' + end : end + '-' + start)
+      currentDate = startTime == endTime && (years[startValue[0]] == now.getFullYear() && Number(months[startValue[1]]) == now.getMonth() + 1) && Number(days[startValue[2]]) == now.getDate() ? '本日' : (startTime < endTime ? start + '-' + end : end + '-' + start)
 
     } else { //按月选择
       let year = years[value[0]]
       console.log(months)
       let month = months[value[1]]
-      currentDate = year === now.getFullYear() && month === now.getMonth() + 1 ? '本月' : year + '/' + month
+      currentDate = year == now.getFullYear() && month == now.getMonth() + 1 ? '本月' : year + '/' + month
     }
 
 
