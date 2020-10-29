@@ -3,4 +3,5 @@
   <navigator url="/pages/imageScale/imageScale">1.设定图片固定比例</navigator>
   <navigator url="/pages/cropper/cropper">2.裁剪图片插件</navigator>
   <navigator url="/pages/selectDate/selectDate-index">3.仿照支付宝日期选择组件</navigator>
+  <navigator url="/pages/half-checked/half-checked">4.全选,半选功能</navigator>
 </view>

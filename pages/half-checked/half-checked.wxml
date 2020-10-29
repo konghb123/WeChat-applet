@@ -1,0 +1,14 @@
+<!--pages/half-checked/half-checked.wxml-->
+<view class="container">
+	<view class="title">微信小程序实现全选,半选</view>
+	<view class="content" wx:for="{{list}}" wx:key="id">
+		<view class="allBtn">
+			<checkbox checked="{{item.isSelected}}" bindtap="selectAll" data-state="{{item}}" class="{{tools.inArray(checkedList,item.id)&&!item.isSelected?'half':''}}">{{item.name}}</checkbox>
+		</view>
+		<checkbox-group bindchange="change" data-id="{{item.id}}">
+			<checkbox checked="{{func.isSelected}}" wx:for="{{item.arr}}" wx:key="id" wx:for-item="func" value="{{func.id}}" >{{func.name}}</checkbox>
+		</checkbox-group>
+	</view>
+</view>
+<!-- 引入wxs 检测数组中是否存在某元素 -->
+<wxs src="../../wxs/inArray.wxs" module="tools" />

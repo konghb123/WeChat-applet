@@ -6,7 +6,8 @@
     "pages/cropper/cropper",
     "components/cropper/image-cropper",
     "pages/selectDate/selectDate-index",
-    "pages/selectDate/selectDate"
+    "pages/selectDate/selectDate",
+    "pages/half-checked/half-checked"
   ],
   "window": {
     "backgroundTextStyle": "light",

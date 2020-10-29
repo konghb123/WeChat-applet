@@ -1,0 +1,28 @@
+/* pages/half-checked/half-checked.wxss */
+.content{
+  padding: 20rpx;
+}
+.title{
+  width: 100%;
+  text-align: center;
+}
+.allBtn{
+  margin-bottom: 20rpx;
+}
+
+
+
+
+.half .wx-checkbox-input::before {
+  content: '';
+  /*CSS伪类用法*/
+  position: absolute;
+  /*定位背景横线的位置*/
+  top: 50%;
+  left: 50%;
+  background: #09BB1E;
+  /*宽和高做出来的背景横线*/
+  width: 30rpx;
+  height: 2rpx;
+  transform: translateX(-15rpx) translateY(-1rpx);
+}

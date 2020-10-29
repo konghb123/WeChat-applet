@@ -72,7 +72,7 @@
           "scene": null
         },
         {
-          "name": "pages/selectDate/selectDate-index",
+          "name": "仿支付宝日期选择组件",
           "pathName": "pages/selectDate/selectDate-index",
           "query": "",
           "scene": null
