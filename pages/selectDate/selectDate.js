@@ -16,6 +16,17 @@ for (let year = 1990; year <= now.getFullYear(); year++) {
   years.push(year)
 }
 
+let defaultMonths=[]
+for (let index = 1; index <=12; index++) {
+  defaultMonths.push(process(index))
+}
+
+
+let defaultDays=[]
+for (let index = 1; index <=31; index++) {
+  defaultDays.push(process(index))
+}
+
 // 月  需要根据 年份 判断
 
 function getCurrentYearMonth(year) { //获取当年 月份数  如果是今年 截止到当前日期
@@ -54,7 +65,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentDate: '',
+    //默认月份 日期  因为日期显示是按照  {{years[endValue[0]]}}-{{months[endValue[1]]}}-{{days[endValue[2]]}} 的格式，如果days变化会出现不显示的情况
+    defaultMonths,
+    defaultDays,
     //日期选择模式  true  按日期   false  按月份
     model: true,
     // 年 月 日 列表
@@ -176,6 +189,7 @@ Page({
         months: getCurrentYearMonth(year),
         days: getCurrentMonthDay(year, month)
       })
+      console.log(this.data.startValue,this.data.endValue)
     }
   },
 

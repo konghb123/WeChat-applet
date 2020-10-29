@@ -18,9 +18,9 @@
   <view class="main">
     <!-- 按日选择 -->
     <view class="selectDay" wx:if="{{model}}">
-      <view bindtap="clickChange" data-type="1" class="{{click==1?'clicked':''}}">{{years[startValue[0]]}}-{{months[startValue[1]]}}-{{days[startValue[2]]}}</view>
+      <view bindtap="clickChange" data-type="1" class="{{click==1?'clicked':''}}">{{years[startValue[0]]}}-{{defaultMonths[startValue[1]]}}-{{defaultDays[startValue[2]]}}</view>
       <text>至</text>
-      <view bindtap="clickChange" data-type="2" class="{{click==2?'clicked':''}}">{{years[endValue[0]]}}-{{months[endValue[1]]}}-{{days[endValue[2]]}}</view>
+      <view bindtap="clickChange" data-type="2" class="{{click==2?'clicked':''}}">{{years[endValue[0]]}}-{{defaultMonths[endValue[1]]}}-{{defaultDays[endValue[2]]}}</view>
     </view>
     <!-- 按月选择 -->
     <view class="{{click==0?'clicked selectMonth':'selectMonth'}}" data-type="0" wx:else bindtap="clickChange">
