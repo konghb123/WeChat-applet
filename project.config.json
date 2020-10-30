@@ -76,6 +76,18 @@
           "pathName": "pages/selectDate/selectDate-index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "基础",
+          "pathName": "pages/basis/basis",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "坑",
+          "pathName": "pages/problem/problem",
+          "query": "",
+          "scene": null
         }
       ]
     }

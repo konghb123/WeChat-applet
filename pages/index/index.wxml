@@ -1,7 +1,11 @@
 <!--index.wxml-->
 <view class="container">
+  <view>微信小程序基础</view>
+  <navigator url="/pages/imageScale/imageScale">1.微信小程序组件样式修改</navigator>
+  <view>微信小程序功能实现</view>
   <navigator url="/pages/imageScale/imageScale">1.设定图片固定比例</navigator>
-  <navigator url="/pages/cropper/cropper">2.裁剪图片插件</navigator>
-  <navigator url="/pages/selectDate/selectDate-index">3.仿照支付宝日期选择组件</navigator>
-  <navigator url="/pages/half-checked/half-checked">4.全选,半选功能</navigator>
+  <navigator url="/pages/half-checked/half-checked">2.全选,半选功能</navigator>
+  <view>微信小程序自定义组件</view>
+  <navigator url="/pages/cropper/cropper">1.裁剪图片插件</navigator>
+  <navigator url="/pages/selectDate/selectDate-index">2.仿照支付宝日期选择组件</navigator>
 </view>

@@ -1,0 +1,23 @@
+<!--pages/basis/basis.wxml-->
+<view class="container">
+  <view>checkbox样式</view>
+  <view>
+    <label class="checkbox">
+      <checkbox checked="true" />选中
+    </label>
+    <label class="checkbox">
+      <checkbox  />未选中
+    </label>
+  </view>
+  <view>radio样式</view>
+  <view>
+    <radio-group>
+      <label class="radio">
+        <radio  checked="true" />选中
+      </label>
+      <label class="radio">
+        <radio  />未选中
+      </label>
+    </radio-group>
+  </view>
+</view>
